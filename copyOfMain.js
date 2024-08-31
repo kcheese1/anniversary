@@ -22,7 +22,7 @@ document.getElementById('nextJokeBtn').addEventListener('click', () => {
 
 // Animation Timeline
 const animationTimeline = () => {
-  // Spit chars that need to be animated individually
+  // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
   const lines = textBoxChars.innerHTML.split('<br>').map(line => 
@@ -111,7 +111,7 @@ const animationTimeline = () => {
     .to(".fake-btn", 0.1, {
       backgroundColor: "rgb(127, 206, 248)",
     })
-    .from(".i-love-you", 0.7, {
+    tl.from(".i-love-you", 0.7, {
       opacity: 0,
       scale: 0.2,
       y: 50,
@@ -203,14 +203,6 @@ const animationTimeline = () => {
       y: 0,
       ease: Power2.easeOut,
     })
-    .to(["#nextJokeBtn", "#joke"], 2, { // Fade out both the button and the joke text after 5 seconds
-      opacity: 0,
-      visibility: "hidden",
-    }, "+=5") // Delay of 5 seconds before fade out begins
-    .from(".six", 0.7, {
-      opacity: 0,
-      y: 10,
-    })
     .staggerFromTo(
       ".baloons img",
       2.5,
@@ -294,15 +286,6 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
-    // Reset visibility and opacity of .ten and .six for restart
-    document.querySelector('.ten').style.visibility = 'hidden';
-    document.querySelector('.ten').style.opacity = 0;
-    document.querySelector('.six').style.visibility = 'hidden';
-    document.querySelector('.six').style.opacity = 0;
-    document.getElementById('nextJokeBtn').style.visibility = 'visible';
-    document.getElementById('nextJokeBtn').style.opacity = 1;
-    document.getElementById('joke').style.visibility = 'visible';
-    document.getElementById('joke').style.opacity = 1;
   });
 };
 

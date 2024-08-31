@@ -66,6 +66,14 @@ body {
   position: relative;
 }
 
+.i-love-you {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff69b4; /* or any color you prefer */
+  margin: 20px 0;
+}
+
 .text-box p {
   margin: 0;
   text-align: left;
@@ -90,6 +98,11 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+}
+#greetings-list p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
 }
 
 .idea-3 strong {
@@ -297,4 +310,5 @@ body {
     font-size: 1.5rem;
     font-weight: lighter;
   }
+
 }
