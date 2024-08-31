@@ -1,25 +1,3 @@
-// Dad Jokes Functionality
-const jokes = [
-  "I'm afraid for the calendar. Its days are numbered.",
-  "Why don't skeletons fight each other? They don't have the guts.",
-  "What do you call fake spaghetti? An impasta.",
-  "Why did the math book look sad? Because it had too many problems.",
-  "Why don’t eggs tell jokes? They’d crack each other up.",
-  // Add more jokes up to 100
-  "How do you make a tissue dance? Put a little boogie in it.",
-  "Why don't some couples go to the gym? Because some relationships don't work out.",
-  "I would avoid the sushi if I was you. It’s a little fishy.",
-  "Want to hear a joke about construction? I'm still working on it.",
-  "What do you call cheese that isn't yours? Nacho cheese.",
-];
-
-let currentJokeIndex = 0;
-
-document.getElementById('nextJokeBtn').addEventListener('click', () => {
-  currentJokeIndex = (currentJokeIndex + 1) % jokes.length;
-  document.getElementById('joke').textContent = jokes[currentJokeIndex];
-});
-
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that need to be animated individually
@@ -197,16 +175,6 @@ const animationTimeline = () => {
       0.2,
       "+=1"
     )
-    .to(".ten", 0.7, {
-      visibility: "visible", // Show joke section
-      opacity: 1,
-      y: 0,
-      ease: Power2.easeOut,
-    })
-    .to(["#nextJokeBtn", "#joke"], 2, { // Fade out both the button and the joke text after 5 seconds
-      opacity: 0,
-      visibility: "hidden",
-    }, "+=5") // Delay of 5 seconds before fade out begins
     .from(".six", 0.7, {
       opacity: 0,
       y: 10,
