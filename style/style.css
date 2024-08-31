@@ -68,10 +68,10 @@ body {
 
 .i-love-you {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #ff69b4; /* or any color you prefer */
-  margin: 20px 0;
+  color: #8251ED; /* or any color you prefer */
+  margin: 50px 0;
 }
 
 .text-box p {
