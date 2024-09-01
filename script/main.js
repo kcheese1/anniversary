@@ -249,29 +249,6 @@ const animationTimeline = () => {
       },
       "party"
     )
-    .to(".six", 0.5, {
-      opacity: 0,
-      y: 30,
-      zIndex: "-1",
-    }, "+=2");
-
-  // tl.seek("currentStep");
-  // tl.timeScale(2);
-
-  // Restart Animation on click
-  const replyBtn = document.getElementById("replay");
-  replyBtn.addEventListener("click", () => {
-    tl.restart();
-    // Reset visibility and opacity of .ten and .six for restart
-    document.querySelector('.ten').style.visibility = 'hidden';
-    document.querySelector('.ten').style.opacity = 0;
-    document.querySelector('.six').style.visibility = 'hidden';
-    document.querySelector('.six').style.opacity = 0;
-    document.getElementById('nextJokeBtn').style.visibility = 'visible';
-    document.getElementById('nextJokeBtn').style.opacity = 1;
-    document.getElementById('joke').style.visibility = 'visible';
-    document.getElementById('joke').style.opacity = 1;
-  });
 };
 
 // Import the data to customize and insert them into page
